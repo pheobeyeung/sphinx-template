@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html data-content_root="./" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   UR Documentation Template 0.1 documentation
+  </title>
+  <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+  <link href="_static/main.css?v=c85eb75c" rel="stylesheet" type="text/css"/>
+  <link href="_static/copybutton.css" rel="stylesheet" type="text/css"/>
+  <script src="_static/jquery.js?v=5d32c60e">
+  </script>
+  <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c">
+  </script>
+  <script src="_static/documentation_options.js">
+  </script>
+  <script src="_static/doctools.js">
+  </script>
+  <script src="_static/sphinx_highlight.js">
+  </script>
+  <script src="_static/clipboard.min.js">
+  </script>
+  <script src="_static/copybutton.js">
+  </script>
+  <link href="genindex.html" rel="index" title="Index"/>
+  <link href="search.html" rel="search" title="Search"/>
+ </head>
+ <body>
+  <article class="dont-break" id="cover">
+   <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+     <p>
+     </p>
+    </div>
+    <!-- Cover middle -->
+    <div class="cover-middle">
+     <div class="title">
+      <h1 class="title-cover">
+       UR Documentation Template
+      </h1>
+      <p class="subtitle-cover">
+       Version
+      </p>
+      <span class="meta">
+      </span>
+     </div>
+     <!--
+      <div class="client-logo">
+        <img src="../data/logo_.png" alt="Logotipo">
+      </div>
+      -->
+    </div>
+    <!-- Footer -->
+    <div class="cover-footer">
+     <p>
+     </p>
+    </div>
+   </div>
+  </article>
+  <div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+   <div class="sphinxsidebarwrapper">
+    <div>
+     <h3>
+      <a href="#">
+       Table of Contents
+      </a>
+     </h3>
+     <p class="caption" role="heading">
+      <span class="caption-text">
+       Contents:
+      </span>
+     </p>
+     <ul>
+      <li class="toctree-l1">
+       <a class="reference internal" href="#testing">
+        Testing
+       </a>
+      </li>
+      <li class="toctree-l1">
+       <a class="reference internal" href="#get-forward-kin-q-current-joint-positions-tcp-active-tcp">
+        get_forward_kin(q=&rsquo;current_joint_positions&rsquo;, tcp=&rsquo;active_tcp&rsquo;)
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="document">
+   <div class="documentwrapper">
+    <div class="bodywrapper">
+     <div class="body" role="main">
+      <section id="welcome-to-ur-documentation-template-s-documentation">
+       <h1>
+        Welcome to UR Documentation Template&rsquo;s documentation!
+        <a class="headerlink" href="#welcome-to-ur-documentation-template-s-documentation" title="Link to this heading">
+         
+        </a>
+       </h1>
+       <div class="toctree-wrapper compound">
+        <span id="document-test">
+        </span>
+        <section id="testing">
+         <h2>
+          Testing
+          <a class="headerlink" href="#testing" title="Link to this heading">
+           
+          </a>
+         </h2>
+         <p>
+          Does this work in other languages? Please say yes.
+         </p>
+        </section>
+        <span id="document-get_forward_kin_q_current_joint_positions">
+        </span>
+        <section id="get-forward-kin-q-current-joint-positions-tcp-active-tcp">
+         <h2>
+          get_forward_kin(q=&rsquo;current_joint_positions&rsquo;, tcp=&rsquo;active_tcp&rsquo;)
+          <a class="headerlink" href="#get-forward-kin-q-current-joint-positions-tcp-active-tcp" title="Link to this heading">
+           
+          </a>
+         </h2>
+         <p>
+          Calculate the forward kinematic transformation (joint space -&gt; tool space) using the calibrated robot kinematics. If no joint position vector is provided the current joint angles of the robot arm will be used. If no tcp is provided the currently active tcp of the controller will be used.
+         </p>
+         <p>
+          <strong>
+           Parameters
+          </strong>
+         </p>
+         <p>
+          <code class="docutils literal notranslate">
+           <span class="pre">
+            q:
+           </span>
+          </code>
+          joint position vector (Optional)
+         </p>
+         <p>
+          <code class="docutils literal notranslate">
+           <span class="pre">
+            tcp:
+           </span>
+          </code>
+          tcp offset pose (Optional)
+         </p>
+         <p>
+          <strong>
+           Return Value
+          </strong>
+         </p>
+         <p>
+          tool pose
+         </p>
+         <p>
+          <strong>
+           Example command:
+          </strong>
+          <code class="docutils literal notranslate">
+           <span class="pre">
+            get_forward_kin([0.,3.14,1.57,.785,0,0],
+           </span>
+           <span class="pre">
+            p[0,0,0.01,0,0,0])
+           </span>
+          </code>
+         </p>
+         <ul class="simple">
+          <li>
+           <p>
+            Example Parameters:
+           </p>
+           <ul>
+            <li>
+             <p>
+              q = [0.,3.14,1.57,.785,0,0] -&gt; joint angles of j0=0 deg, j1=180 deg, j2=90 deg, j3=45 deg, j4=0 deg, j5=0 deg.
+             </p>
+            </li>
+            <li>
+             <p>
+              tcp = p[0,0,0.01,0,0,0] -&gt; tcp offset of x=0mm, y=0mm, z=10mm and rotation vector of rx=0 deg., ry=0 deg, rz=0 deg.
+             </p>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </section>
+       </div>
+      </section>
+      <div class="clearer">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="clearer">
+   </div>
+  </div>
+  <h1>
+   SimplePDF Debug output
+  </h1>
+  <p>
+   This is some build environment specific output.
+  It shall help to identify problems during the build process.
+  </p>
+  <p>
+   You see this output because
+   <b>
+    simplepdf_debug=True
+   </b>
+   is set on the
+   <b>
+    conf.py
+   </b>
+   file.
+  </p>
+  <h2>
+   Sphinx
+  </h2>
+  <b>
+   Version
+  </b>
+  : 7.2.6
+  <br/>
+  <b>
+   Srcdir
+  </b>
+  : /workspaces/documentation-template/source
+  <br/>
+  <b>
+   Confdir
+  </b>
+  : /workspaces/documentation-template/source
+  <br/>
+  <b>
+   Outdir
+  </b>
+  : /workspaces/documentation-template/source/_build/simplepdf
+  <br/>
+  <h3>
+   Extensions
+  </h3>
+  <p>
+   Used Sphinx extension can be also found in the packages list of Python, which also includes the used version.
+  </p>
+  <p>
+   myst_parser
+   <br/>
+   sphinx_copybutton
+   <br/>
+   sphinx_favicon
+   <br/>
+   sphinx_multiversion
+   <br/>
+   sphinx_new_tab_link
+   <br/>
+   sphinx_rtd_theme
+   <br/>
+   sphinx_simplepdf
+   <br/>
+  </p>
+  <h3>
+   SimplePDF Configs
+  </h3>
+  <b>
+   simplepdf_vars
+  </b>
+  : {'primary': '#01579B', 'primary-opaque': '1, 87, 155, 0.5', 'secondary': '#039BE5', 'cover': '#FFFFFF', 'white': '#FFFFFF', 'links': '#4FC3F7', 'cover-bg': 'url(cobots.jpeg) no-repeat center', 'cover-overlay': 'rgba(100, 181, 246, 0.8)', 'top-left-content': 'counter(page)', 'bottom-center-content': '"Custom footer content"'}
+  <br/>
+  <b>
+   simplepdf_file_name
+  </b>
+  : None
+  <br/>
+  <b>
+   simplepdf_debug
+  </b>
+  : True
+  <br/>
+  <b>
+   simplepdf_weasyprint_timeout
+  </b>
+  : None
+  <br/>
+  <b>
+   simplepdf_weasyprint_flags
+  </b>
+  : None
+  <br/>
+  <b>
+   simplepdf_use_weasyprint_api
+  </b>
+  : None
+  <br/>
+  <b>
+   simplepdf_theme
+  </b>
+  : simplepdf_theme
+  <br/>
+  <b>
+   simplepdf_theme_options
+  </b>
+  : {}
+  <br/>
+  <b>
+   simplepdf_sidebars
+  </b>
+  : {'**': ['localtoc.html']}
+  <br/>
+  <h2>
+   Python
+  </h2>
+  <b>
+   Executable
+  </b>
+  : /usr/local/bin/python
+  <br/>
+  <b>
+   Operating System
+  </b>
+  : Linux (Release: 6.6.12-linuxkit)
+  <br/>
+  <h3>
+   Packages
+  </h3>
+  <p>
+   This chapter shows a list of installed packages in the current Python environment, which was used to build this
+  PDF. The second value is the version number.
+  </p>
+  <h4>
+   Important packages
+  </h4>
+  <p>
+   <b>
+    PIL: unknown
+   </b>
+   <br/>
+   <b>
+    sphinx: 7.2.6
+   </b>
+   <br/>
+   <b>
+    sphinx_simplepdf: 1.6.0
+   </b>
+   <br/>
+   <b>
+    weasyprint: 61.1
+   </b>
+   <br/>
+  </p>
+  <h4>
+   Other packages
+  </h4>
+  <p>
+   __future__: unknown
+   <br/>
+   __hello__: unknown
+   <br/>
+   __phello__: unknown
+   <br/>
+   _aix_support: unknown
+   <br/>
+   _asyncio: unknown
+   <br/>
+   _bisect: unknown
+   <br/>
+   _blake2: unknown
+   <br/>
+   _brotli: unknown
+   <br/>
+   _bz2: unknown
+   <br/>
+   _cffi_backend: unknown
+   <br/>
+   _codecs_cn: unknown
+   <br/>
+   _codecs_hk: unknown
+   <br/>
+   _codecs_iso2022: unknown
+   <br/>
+   _codecs_jp: unknown
+   <br/>
+   _codecs_kr: unknown
+   <br/>
+   _codecs_tw: unknown
+   <br/>
+   _collections_abc: unknown
+   <br/>
+   _compat_pickle: unknown
+   <br/>
+   _compression: unknown
+   <br/>
+   _contextvars: unknown
+   <br/>
+   _crypt: unknown
+   <br/>
+   _csv: unknown
+   <br/>
+   _ctypes: unknown
+   <br/>
+   _ctypes_test: unknown
+   <br/>
+   _curses: unknown
+   <br/>
+   _curses_panel: unknown
+   <br/>
+   _datetime: unknown
+   <br/>
+   _dbm: unknown
+   <br/>
+   _decimal: unknown
+   <br/>
+   _distutils_hack: unknown
+   <br/>
+   _elementtree: unknown
+   <br/>
+   _gdbm: unknown
+   <br/>
+   _hashlib: unknown
+   <br/>
+   _heapq: unknown
+   <br/>
+   _json: unknown
+   <br/>
+   _lsprof: unknown
+   <br/>
+   _lzma: unknown
+   <br/>
+   _markupbase: unknown
+   <br/>
+   _md5: unknown
+   <br/>
+   _multibytecodec: unknown
+   <br/>
+   _multiprocessing: unknown
+   <br/>
+   _opcode: unknown
+   <br/>
+   _osx_support: unknown
+   <br/>
+   _pickle: unknown
+   <br/>
+   _posixshmem: unknown
+   <br/>
+   _posixsubprocess: unknown
+   <br/>
+   _py_abc: unknown
+   <br/>
+   _pydatetime: unknown
+   <br/>
+   _pydecimal: unknown
+   <br/>
+   _pyio: unknown
+   <br/>
+   _pylong: unknown
+   <br/>
+   _queue: unknown
+   <br/>
+   _random: unknown
+   <br/>
+   _sass: unknown
+   <br/>
+   _sha1: unknown
+   <br/>
+   _sha2: unknown
+   <br/>
+   _sha3: unknown
+   <br/>
+   _sitebuiltins: unknown
+   <br/>
+   _socket: unknown
+   <br/>
+   _sqlite3: unknown
+   <br/>
+   _ssl: unknown
+   <br/>
+   _statistics: unknown
+   <br/>
+   _strptime: unknown
+   <br/>
+   _struct: unknown
+   <br/>
+   _sysconfigdata__linux_aarch64-linux-gnu: unknown
+   <br/>
+   _testbuffer: unknown
+   <br/>
+   _testcapi: unknown
+   <br/>
+   _testclinic: unknown
+   <br/>
+   _testimportmultiple: unknown
+   <br/>
+   _testinternalcapi: unknown
+   <br/>
+   _testmultiphase: unknown
+   <br/>
+   _testsinglephase: unknown
+   <br/>
+   _threading_local: unknown
+   <br/>
+   _tkinter: unknown
+   <br/>
+   _uuid: unknown
+   <br/>
+   _weakrefset: unknown
+   <br/>
+   _xxinterpchannels: unknown
+   <br/>
+   _xxsubinterpreters: unknown
+   <br/>
+   _xxtestfuzz: unknown
+   <br/>
+   _yaml: unknown
+   <br/>
+   _zoneinfo: unknown
+   <br/>
+   abc: unknown
+   <br/>
+   aifc: unknown
+   <br/>
+   alabaster: 0.7.16
+   <br/>
+   antigravity: unknown
+   <br/>
+   argparse: unknown
+   <br/>
+   array: unknown
+   <br/>
+   ast: unknown
+   <br/>
+   asyncio: unknown
+   <br/>
+   audioop: unknown
+   <br/>
+   babel: 2.14.0
+   <br/>
+   base64: unknown
+   <br/>
+   bdb: unknown
+   <br/>
+   binascii: unknown
+   <br/>
+   bisect: unknown
+   <br/>
+   brotli: 1.1.0
+   <br/>
+   bs4: unknown
+   <br/>
+   bz2: unknown
+   <br/>
+   calendar: unknown
+   <br/>
+   certifi: 2024.2.2
+   <br/>
+   cffi: 1.16.0
+   <br/>
+   cgi: unknown
+   <br/>
+   cgitb: unknown
+   <br/>
+   charset_normalizer: 3.3.2
+   <br/>
+   chunk: unknown
+   <br/>
+   click: 8.1.7
+   <br/>
+   cmath: unknown
+   <br/>
+   cmd: unknown
+   <br/>
+   code: unknown
+   <br/>
+   codecs: unknown
+   <br/>
+   codeop: unknown
+   <br/>
+   collections: unknown
+   <br/>
+   colorama: 0.4.6
+   <br/>
+   colorsys: unknown
+   <br/>
+   compileall: unknown
+   <br/>
+   concurrent: unknown
+   <br/>
+   configparser: unknown
+   <br/>
+   contextlib: unknown
+   <br/>
+   contextvars: unknown
+   <br/>
+   copy: unknown
+   <br/>
+   copyreg: unknown
+   <br/>
+   cProfile: unknown
+   <br/>
+   crypt: unknown
+   <br/>
+   cssselect2: 0.7.0
+   <br/>
+   csv: unknown
+   <br/>
+   ctypes: unknown
+   <br/>
+   curses: unknown
+   <br/>
+   dataclasses: unknown
+   <br/>
+   datetime: unknown
+   <br/>
+   dbm: unknown
+   <br/>
+   decimal: unknown
+   <br/>
+   difflib: unknown
+   <br/>
+   dis: unknown
+   <br/>
+   doc8: 1.1.1
+   <br/>
+   doctest: unknown
+   <br/>
+   docutils: 0.20.1
+   <br/>
+   email: unknown
+   <br/>
+   encodings: unknown
+   <br/>
+   ensurepip: unknown
+   <br/>
+   enum: unknown
+   <br/>
+   fcntl: unknown
+   <br/>
+   filecmp: unknown
+   <br/>
+   fileinput: unknown
+   <br/>
+   fnmatch: unknown
+   <br/>
+   fontTools: 4.49.0
+   <br/>
+   fractions: unknown
+   <br/>
+   ftplib: unknown
+   <br/>
+   functools: unknown
+   <br/>
+   genericpath: unknown
+   <br/>
+   getopt: unknown
+   <br/>
+   getpass: unknown
+   <br/>
+   gettext: unknown
+   <br/>
+   git: unknown
+   <br/>
+   gitdb: 4.0.11
+   <br/>
+   glob: unknown
+   <br/>
+   graphlib: unknown
+   <br/>
+   grp: unknown
+   <br/>
+   gzip: unknown
+   <br/>
+   hashlib: unknown
+   <br/>
+   heapq: unknown
+   <br/>
+   hmac: unknown
+   <br/>
+   html: unknown
+   <br/>
+   html5lib: 1.1
+   <br/>
+   http: unknown
+   <br/>
+   idlelib: unknown
+   <br/>
+   idna: 3.6
+   <br/>
+   imagesize: 1.4.1
+   <br/>
+   imaplib: unknown
+   <br/>
+   imghdr: unknown
+   <br/>
+   importlib: unknown
+   <br/>
+   inspect: unknown
+   <br/>
+   io: unknown
+   <br/>
+   ipaddress: unknown
+   <br/>
+   jinja2: 3.1.3
+   <br/>
+   json: unknown
+   <br/>
+   keyword: unknown
+   <br/>
+   latexcodec: 2.0.1
+   <br/>
+   lib2to3: unknown
+   <br/>
+   linecache: unknown
+   <br/>
+   livereload: 2.6.3
+   <br/>
+   locale: unknown
+   <br/>
+   logging: unknown
+   <br/>
+   lzma: unknown
+   <br/>
+   mailbox: unknown
+   <br/>
+   mailcap: unknown
+   <br/>
+   markdown_it: unknown
+   <br/>
+   markupsafe: 2.1.5
+   <br/>
+   math: unknown
+   <br/>
+   mdit_py_plugins: 0.4.0
+   <br/>
+   mdurl: 0.1.2
+   <br/>
+   mimetypes: unknown
+   <br/>
+   mmap: unknown
+   <br/>
+   modulefinder: unknown
+   <br/>
+   multiprocessing: unknown
+   <br/>
+   myst_parser: 2.0.0
+   <br/>
+   netrc: unknown
+   <br/>
+   nis: unknown
+   <br/>
+   nntplib: unknown
+   <br/>
+   ntpath: unknown
+   <br/>
+   nturl2path: unknown
+   <br/>
+   numbers: unknown
+   <br/>
+   opcode: unknown
+   <br/>
+   operator: unknown
+   <br/>
+   optparse: unknown
+   <br/>
+   os: unknown
+   <br/>
+   ossaudiodev: unknown
+   <br/>
+   packaging: 23.2
+   <br/>
+   pathlib: unknown
+   <br/>
+   pbr: 6.0.0
+   <br/>
+   pdb: unknown
+   <br/>
+   pickle: unknown
+   <br/>
+   pickletools: unknown
+   <br/>
+   pip: 24.0
+   <br/>
+   pipes: unknown
+   <br/>
+   pkg_resources: unknown
+   <br/>
+   pkgutil: unknown
+   <br/>
+   platform: unknown
+   <br/>
+   plistlib: unknown
+   <br/>
+   poplib: unknown
+   <br/>
+   posixpath: unknown
+   <br/>
+   pprint: unknown
+   <br/>
+   profile: unknown
+   <br/>
+   pstats: unknown
+   <br/>
+   pty: unknown
+   <br/>
+   py_compile: unknown
+   <br/>
+   pybtex: 0.24.0
+   <br/>
+   pybtex_docutils: 1.0.3
+   <br/>
+   pyclbr: unknown
+   <br/>
+   pycparser: 2.21
+   <br/>
+   pydoc: unknown
+   <br/>
+   pydoc_data: unknown
+   <br/>
+   pydyf: 0.9.0
+   <br/>
+   pyexpat: unknown
+   <br/>
+   pygments: 2.17.2
+   <br/>
+   pyphen: 0.14.0
+   <br/>
+   pysassc: unknown
+   <br/>
+   queue: unknown
+   <br/>
+   quopri: unknown
+   <br/>
+   random: unknown
+   <br/>
+   re: unknown
+   <br/>
+   readline: unknown
+   <br/>
+   reprlib: unknown
+   <br/>
+   requests: 2.31.0
+   <br/>
+   resource: unknown
+   <br/>
+   restructuredtext_lint: 1.4.0
+   <br/>
+   rlcompleter: unknown
+   <br/>
+   rst2html: unknown
+   <br/>
+   rst2html4: unknown
+   <br/>
+   rst2html5: unknown
+   <br/>
+   rst2latex: unknown
+   <br/>
+   rst2man: unknown
+   <br/>
+   rst2odt: unknown
+   <br/>
+   rst2odt_prepstyles: unknown
+   <br/>
+   rst2pseudoxml: unknown
+   <br/>
+   rst2s5: unknown
+   <br/>
+   rst2xetex: unknown
+   <br/>
+   rst2xml: unknown
+   <br/>
+   rstpep2html: unknown
+   <br/>
+   runpy: unknown
+   <br/>
+   sass: unknown
+   <br/>
+   sasstests: unknown
+   <br/>
+   sassutils: unknown
+   <br/>
+   sched: unknown
+   <br/>
+   secrets: unknown
+   <br/>
+   select: unknown
+   <br/>
+   selectors: unknown
+   <br/>
+   setuptools: 69.0.3
+   <br/>
+   shelve: unknown
+   <br/>
+   shlex: unknown
+   <br/>
+   shutil: unknown
+   <br/>
+   signal: unknown
+   <br/>
+   site: unknown
+   <br/>
+   six: 1.16.0
+   <br/>
+   smmap: 5.0.1
+   <br/>
+   smtplib: unknown
+   <br/>
+   sndhdr: unknown
+   <br/>
+   snowballstemmer: 2.2.0
+   <br/>
+   socket: unknown
+   <br/>
+   socketserver: unknown
+   <br/>
+   soupsieve: 2.5
+   <br/>
+   sphinx_autobuild: 2021.3.14
+   <br/>
+   sphinx_copybutton: 0.5.2
+   <br/>
+   sphinx_favicon: 1.0.1
+   <br/>
+   sphinx_intl: 2.1.0
+   <br/>
+   sphinx_multiversion: 0.2.4
+   <br/>
+   sphinx_new_tab_link: 0.2.1
+   <br/>
+   sphinx_numfig: 0.1.1
+   <br/>
+   sphinx_rtd_theme: 2.0.0
+   <br/>
+   sphinx_sitemap: 2.5.1
+   <br/>
+   sphinx_tabs: 3.4.5
+   <br/>
+   spwd: unknown
+   <br/>
+   sqlite3: unknown
+   <br/>
+   sre_compile: unknown
+   <br/>
+   sre_constants: unknown
+   <br/>
+   sre_parse: unknown
+   <br/>
+   ssl: unknown
+   <br/>
+   stat: unknown
+   <br/>
+   statistics: unknown
+   <br/>
+   stevedore: 5.2.0
+   <br/>
+   string: unknown
+   <br/>
+   stringprep: unknown
+   <br/>
+   struct: unknown
+   <br/>
+   subprocess: unknown
+   <br/>
+   sunau: unknown
+   <br/>
+   symtable: unknown
+   <br/>
+   sysconfig: unknown
+   <br/>
+   syslog: unknown
+   <br/>
+   tabnanny: unknown
+   <br/>
+   tarfile: unknown
+   <br/>
+   telnetlib: unknown
+   <br/>
+   tempfile: unknown
+   <br/>
+   termios: unknown
+   <br/>
+   tests: unknown
+   <br/>
+   textwrap: unknown
+   <br/>
+   this: unknown
+   <br/>
+   threading: unknown
+   <br/>
+   timeit: unknown
+   <br/>
+   tinycss2: 1.2.1
+   <br/>
+   tkinter: unknown
+   <br/>
+   token: unknown
+   <br/>
+   tokenize: unknown
+   <br/>
+   tomllib: unknown
+   <br/>
+   tornado: 6.4
+   <br/>
+   trace: unknown
+   <br/>
+   traceback: unknown
+   <br/>
+   tracemalloc: unknown
+   <br/>
+   tty: unknown
+   <br/>
+   turtle: unknown
+   <br/>
+   turtledemo: unknown
+   <br/>
+   types: unknown
+   <br/>
+   typing: unknown
+   <br/>
+   unicodedata: unknown
+   <br/>
+   unittest: unknown
+   <br/>
+   urllib: unknown
+   <br/>
+   urllib3: 2.2.1
+   <br/>
+   uu: unknown
+   <br/>
+   uuid: unknown
+   <br/>
+   venv: unknown
+   <br/>
+   warnings: unknown
+   <br/>
+   wave: unknown
+   <br/>
+   weakref: unknown
+   <br/>
+   webbrowser: unknown
+   <br/>
+   webencodings: 0.5.1
+   <br/>
+   wheel: 0.42.0
+   <br/>
+   wsgiref: unknown
+   <br/>
+   xdrlib: unknown
+   <br/>
+   xml: unknown
+   <br/>
+   xmlrpc: unknown
+   <br/>
+   xxlimited: unknown
+   <br/>
+   xxlimited_35: unknown
+   <br/>
+   xxsubtype: unknown
+   <br/>
+   yaml: unknown
+   <br/>
+   zipapp: unknown
+   <br/>
+   zipfile: unknown
+   <br/>
+   zipimport: unknown
+   <br/>
+   zlib: unknown
+   <br/>
+   zoneinfo: unknown
+   <br/>
+   zopfli: 0.2.3
+   <br/>
+  </p>
+  <article id="back-cover">
+   <div class="container">
+    <div class="back-cover-footer">
+     <p>
+      &copy; Copyright 2024, PHYE.
+     </p>
+     <p>
+     </p>
+    </div>
+   </div>
+  </article>
+ </body>
+</html>

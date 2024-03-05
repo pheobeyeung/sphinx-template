@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, PHYE
+# This file is distributed under the same license as the UR Documentation Template package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: UR Documentation Template \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-04 13:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:1
+msgid "get\\_forward\\_kin(q=’current\\_joint\\_positions’, tcp=’active\\_tcp’)"
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:3
+msgid "Calculate the forward kinematic transformation (joint space -> tool space) using the calibrated robot kinematics. If no joint position vector is provided the current joint angles of the robot arm will be used. If no tcp is provided the currently active tcp of the controller will be used."
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:5
+msgid "**Parameters**"
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:7
+msgid "`q:` joint position vector (Optional)"
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:9
+msgid "`tcp:` tcp offset pose (Optional)"
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:11
+msgid "**Return Value**"
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:13
+msgid "tool pose"
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:15
+msgid "**Example command:** `get_forward_kin([0.,3.14,1.57,.785,0,0], p[0,0,0.01,0,0,0])`"
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:17
+msgid "Example Parameters:"
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:18
+msgid "q = \\[0.,3.14,1.57,.785,0,0\\] -> joint angles of j0=0 deg, j1=180 deg, j2=90 deg, j3=45 deg, j4=0 deg, j5=0 deg."
+msgstr ""
+
+#: ../../source/get_forward_kin_q_current_joint_positions.md:19
+msgid "tcp = p\\[0,0,0.01,0,0,0\\] -> tcp offset of x=0mm, y=0mm, z=10mm and rotation vector of rx=0 deg., ry=0 deg, rz=0 deg."
+msgstr ""
